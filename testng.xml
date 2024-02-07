@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <listeners>
+        <listener class-name="com.Stageform.ITestListenerClass"/>
+
+    </listeners>
+    <test name="Forms">
+    <classes>
+        <!--class name="com.Stageform.Connect"></class!-->
+        <class name="com.Stageform.Contactus"> </class>
+        <!--class name="com.Stageform.Partners"></class!-->
+    </classes>
+</test>
+</suite>
