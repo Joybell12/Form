@@ -20,19 +20,30 @@ public class Sigma extends BaseTest{
     WebDriverWait wait2;
     Actions action;
 
+    String pageLoadStatus = null;
+
+
+
     public Sigma(WebDriver driver) {
         this.driver = driver;
-        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-        wait1 = new WebDriverWait(driver, Duration.ofSeconds(30));
-        wait2 = new WebDriverWait(driver, Duration.ofSeconds(30));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(40));
+        wait1 = new WebDriverWait(driver, Duration.ofSeconds(40));
+        wait2 = new WebDriverWait(driver, Duration.ofSeconds(40));
         this.executor = (JavascriptExecutor) this.driver;
         action=new Actions(driver);
         PageFactory.initElements(driver, this);
+
     }
 
 
-    @FindBy(xpath = "//a[normalize-space()='Contact-Page']")
+     @FindBy(xpath = "//a[normalize-space()='Contact-Page']")
     WebElement contact;
+
+    /*@FindBy(xpath = "//a[normalize-space()='Contact us']")
+    WebElement contactlive;*/
+
+
+
 
     @FindBy(xpath = "//div[@id='botbutton']")
     WebElement cont_load;
@@ -83,18 +94,28 @@ public class Sigma extends BaseTest{
     @FindBy(xpath = "//h2[text()='Interested in learning more about our services?']")
     WebElement contact_text;
 
+     @FindBy(xpath="//body[contains(@class,'page-template-default')]")
+     WebElement animation;
     public void contactlink() {
         wait.until(ExpectedConditions.elementToBeClickable(contact));
         contact.click();
     }
 
     public void contactpageload() {
-        Boolean readyStateComplete = false;
-        while (!readyStateComplete) {
-            JavascriptExecutor executor = (JavascriptExecutor) driver;
-            readyStateComplete = ((String) executor.executeScript("return document.readyState")).equals("complete");
+        do {
+
+            executor = (JavascriptExecutor) driver;
+
+            pageLoadStatus = (String)executor.executeScript("return document.readyState");
+
+        } while ( !pageLoadStatus.equals("complete") );
+
+        System.out.println("Page Loaded.");
+
+
+
         }
-    }
+
 
     public void offer() {
         wait2.until(ExpectedConditions.elementToBeClickable(selection));
@@ -153,6 +174,7 @@ public class Sigma extends BaseTest{
     public void termsandConditions() {
 
         wait1.until(ExpectedConditions.elementToBeClickable(terms));
+
         terms.click();
 
     }
@@ -161,7 +183,7 @@ public class Sigma extends BaseTest{
          action.sendKeys(Keys.PAGE_DOWN).build().perform();
     }
 
-    public void submitbutton() {
+    public void submitbutton() throws InterruptedException {
         wait1.until(ExpectedConditions.elementToBeClickable(cont_submit));
         cont_submit.click();
 

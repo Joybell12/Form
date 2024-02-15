@@ -19,8 +19,10 @@ public class Contactus extends BaseTest{
     public void ContactusFormSubmission() throws InterruptedException {
 
            cntus= new Sigma(driver);
+            cntus.contactpageload();
            cntus.contactlink();
-           //Thread.sleep(8000);
+           Thread.sleep(2000);
+           cntus.contactpageload();
            cntus.offer();
            cntus.contactname(configproperities.property.getProperty("name"));
            cntus.contactemail(configproperities.property.getProperty("emailid"));
