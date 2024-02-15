@@ -24,7 +24,7 @@
             <configuration>
                 <suiteXmlFiles>
                     <suiteXmlFile>
-                        src\test\resources\testng-results.xml
+                        src\main\resources\testng-results.xml
                     </suiteXmlFile>
                 </suiteXmlFiles>
             </configuration>
