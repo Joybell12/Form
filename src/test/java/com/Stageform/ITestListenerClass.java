@@ -25,8 +25,8 @@ public  class ITestListenerClass extends BaseTest implements ITestListener {
         SimpleDateFormat df=new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss");
         Date dt=new Date();
         String currentdatetimestamp= df.format(dt);
-        repName = "Test-report"+ currentdatetimestamp + ".html";
-        sparkReporter = new ExtentSparkReporter( "./reports/"+ repName);
+        repName = "Test-report.html";
+        sparkReporter = new ExtentSparkReporter( "./reports/Test-report.html");
         sparkReporter.config().setDocumentTitle("Automation Report");
         sparkReporter.config().setReportName("Sigma Form");
         sparkReporter.config().setTheme(Theme.STANDARD);
