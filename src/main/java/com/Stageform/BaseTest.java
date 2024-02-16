@@ -43,8 +43,14 @@ public class BaseTest {
 
         options.setExperimentalOption("useAutomationExtension",false);
         options.setPageLoadStrategy(PageLoadStrategy.NONE);*/
+        ChromeOptions options = new ChromeOptions();
+        options.setBinary("/usr/bin/google-chrome-stable /usr/share/man/man1/google-chrome-stable.1.gz");
+        options.addArguments('--headless');
+        options.addArguments('--no-sandbox');
+        options.addArguments('--disable-dev-shm-usage');
 
-        driver = new ChromeDriver();
+
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         //extentTest = extentReports.createTest(context.getName());
         configproperities.initializePropertyFile();
