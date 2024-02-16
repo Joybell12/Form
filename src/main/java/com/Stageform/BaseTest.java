@@ -45,9 +45,14 @@ public class BaseTest {
         options.setPageLoadStrategy(PageLoadStrategy.NONE);*/
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/usr/bin/google-chrome-stable /usr/share/man/man1/google-chrome-stable.1.gz");
-        options.addArguments('--headless');
+        options.addArguments("enable-automation");
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--dns-prefetch-disable");
+        options.addArguments("--disable-gpu");
+        /*options.addArguments('--headless');
         options.addArguments('--no-sandbox');
-        options.addArguments('--disable-dev-shm-usage');
+        options.addArguments('--disable-dev-shm-usage');*/
 
 
         driver = new ChromeDriver(options);
