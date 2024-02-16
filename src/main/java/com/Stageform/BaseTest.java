@@ -44,7 +44,7 @@ public class BaseTest {
         options.setExperimentalOption("useAutomationExtension",false);
         options.setPageLoadStrategy(PageLoadStrategy.NONE);*/
         ChromeOptions options = new ChromeOptions();
-        options.setBinary(" /usr/bin/google-chrome-stable /usr/share/man/man1/google-chrome-stable.1.gz");
+        options.setBinary(" /usr/share/man/man1/google-chrome-stable.1.gz");
         options.addArguments("enable-automation");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-extensions");
