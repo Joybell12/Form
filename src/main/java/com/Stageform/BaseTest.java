@@ -45,7 +45,7 @@ public class BaseTest {
         options.setPageLoadStrategy(PageLoadStrategy.NONE);*/
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/usr/bin/google-chrome-stable");
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("enable-automation");
         options.addArguments("--no-sandbox");
