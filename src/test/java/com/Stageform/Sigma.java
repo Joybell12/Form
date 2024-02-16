@@ -98,8 +98,8 @@ public class Sigma extends BaseTest{
      @FindBy(xpath="//body[contains(@class,'page-template-default')]")
      WebElement animation;
     public void contactlink() {
-        wait.until(ExpectedConditions.elementToBeClickable(contact));
-        contact.click();
+        wait.until(ExpectedConditions.elementToBeClickable(contactlive));
+        contactlive.click();
     }
 
     public void contactpageload() {
