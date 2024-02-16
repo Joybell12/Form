@@ -52,6 +52,7 @@ public class BaseTest {
         options.addArguments("--disable-extensions");
         options.addArguments("--dns-prefetch-disable");
         options.addArguments("--disable-gpu");
+       options.setPageLoadStrategy(PageLoadStrategy.NONE);
         /*options.addArguments('--headless');
         options.addArguments('--no-sandbox');
         options.addArguments('--disable-dev-shm-usage');*/
