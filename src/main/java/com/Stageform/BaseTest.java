@@ -26,7 +26,7 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
 
 
-   public static ChromeDriver driver;
+   public static WebDriver driver;
 
     @BeforeMethod
     public void classLevelSetup() {
