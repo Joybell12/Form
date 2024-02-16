@@ -1,13 +1,14 @@
 package com.Stageform;
 
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import io.opentelemetry.sdk.autoconfigure.spi.ConfigProperties;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.PageLoadStrategy;
 
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.*;
@@ -25,19 +26,24 @@ import java.util.concurrent.TimeUnit;
 public class BaseTest {
 
 
-   public static WebDriver driver;
+   public static ChromeDriver driver;
 
     @BeforeMethod
     public void classLevelSetup() {
-        System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
+        WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("enable-automation");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-extensions");
         options.addArguments("--dns-prefetch-disable");
         options.addArguments("--disable-gpu");
+        options.addArguments("--remote-debugging-port=9222");
+
+        options.setExperimentalOption("useAutomationExtension",false);
         options.setPageLoadStrategy(PageLoadStrategy.NONE);
-        driver = new ChromeDriver(options);
+
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         //extentTest = extentReports.createTest(context.getName());
         configproperities.initializePropertyFile();
