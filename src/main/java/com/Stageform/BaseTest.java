@@ -33,7 +33,7 @@ public class BaseTest {
     public void classLevelSetup() {
         //System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
         WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
+        /*ChromeOptions options = new ChromeOptions();
         options.addArguments("enable-automation");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-extensions");
@@ -42,7 +42,7 @@ public class BaseTest {
         options.addArguments("--remote-debugging-port=9222");
 
         options.setExperimentalOption("useAutomationExtension",false);
-        options.setPageLoadStrategy(PageLoadStrategy.NONE);
+        options.setPageLoadStrategy(PageLoadStrategy.NONE);*/
 
         driver = new ChromeDriver();
         driver.manage().window().maximize();
