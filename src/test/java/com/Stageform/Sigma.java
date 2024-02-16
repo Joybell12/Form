@@ -25,7 +25,7 @@ public class Sigma extends BaseTest{
 
 
 
-    public Sigma(ChromeDriver driver) {
+    public Sigma(WebDriver driver) {
         this.driver = driver;
         wait = new WebDriverWait(driver, Duration.ofSeconds(40));
         wait1 = new WebDriverWait(driver, Duration.ofSeconds(40));
