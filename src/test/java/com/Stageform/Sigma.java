@@ -37,7 +37,7 @@ public class Sigma extends BaseTest{
     }
 
 
-     @FindBy(xpath = "//a[normalize-space()='Contact-Us']")
+     @FindBy(xpath = "//ul[contains(@class, 'sf-menu')]/li/a[text()='Contact Us']")
     WebElement contact;
 
     @FindBy(xpath = "//a[normalize-space()='Contact us']")
