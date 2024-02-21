@@ -11,7 +11,10 @@ public class Contactus extends BaseTest{
 
 
     @Test
-    public void ContactusFormSubmission() throws InterruptedException {
+    public void
+
+
+    ContactusFormSubmission() throws InterruptedException {
 
            cntus= new Sigma(driver);
             cntus.contactpageload();
@@ -27,6 +30,7 @@ public class Contactus extends BaseTest{
            cntus.contactmessage(configproperities.property.getProperty("name"));
            cntus.termsandConditions();
            cntus.submitbutton();
+           cntus.contactpageload();
            cntus.pageloadwaitforsuccessmessage();
            cntus.cotactusvalidate();
         
