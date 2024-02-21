@@ -36,7 +36,7 @@ public  class ITestListenerClass extends BaseTest implements ITestListener {
         extent=new ExtentReports();
         extent.attachReporter(sparkReporter);
 
-        extent.setSystemInfo("Environment","Staging");
+        extent.setSystemInfo("Environment","Live");
         extent.setSystemInfo("Tester name","Patricia");
         extent.setSystemInfo("Browser name","chrome");
 
