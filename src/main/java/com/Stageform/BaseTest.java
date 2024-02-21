@@ -54,8 +54,8 @@ public class BaseTest {
         options.setExperimentalOption("useAutomationExtension",false);
         options.setPageLoadStrategy(PageLoadStrategy.NONE);
         options.addArguments("window-size=1920,1080");
-        //System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
-        //System.setProperty("webdriver.chrome.verboseLogging", "true");
+        System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
+        System.setProperty("webdriver.chrome.verboseLogging", "true");
         /*options.addArguments('--headless');
         options.addArguments('--no-sandbox');
         options.addArguments('--disable-dev-shm-usage');*/
