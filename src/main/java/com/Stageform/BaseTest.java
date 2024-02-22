@@ -48,7 +48,7 @@ public class BaseTest {
         //System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
         //System.setProperty("webdriver.chrome.verboseLogging", "true");
      
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         //extentTest = extentReports.createTest(context.getName());
         configproperities.initializePropertyFile();
