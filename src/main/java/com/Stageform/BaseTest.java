@@ -46,13 +46,14 @@ public class BaseTest {
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/usr/bin/google-chrome-stable");
         //options.addArguments("--headless");
-        options.addArguments("--no-sandbox");
+        //options.addArguments("--no-sandbox");
         options.addArguments("enable-automation");
-        options.addArguments("--disable-extensions");
+        //options.addArguments("--disable-extensions");
         options.addArguments("--dns-prefetch-disable");
         options.addArguments("--disable-gpu");
         options.setExperimentalOption("useAutomationExtension",false);
         options.setPageLoadStrategy(PageLoadStrategy.NONE);
+        options.addArguments("--start-maximized");
         options.addArguments("window-size=1920,1080");
         System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
         System.setProperty("webdriver.chrome.verboseLogging", "true");
