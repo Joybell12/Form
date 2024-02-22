@@ -33,8 +33,8 @@ public class BaseTest {
     public void classLevelSetup() {
         System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
         WebDriverManager.chromedriver().setup();
-        //ChromeOptions options = new ChromeOptions();
-        //options.setBinary("/usr/bin/google-chrome");
+        ChromeOptions options = new ChromeOptions();
+        options.setBinary("/usr/bin/google-chrome-stable");
         //options.addArguments("--headless");
         //options.addArguments("--no-sandbox");
         //options.addArguments("enable-automation");
