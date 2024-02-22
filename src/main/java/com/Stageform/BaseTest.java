@@ -41,7 +41,7 @@ public class BaseTest {
         //options.addArguments("--disable-extensions");
         //options.addArguments("--dns-prefetch-disable");
         //options.addArguments("--disable-gpu");
-        //options.setExperimentalOption("useAutomationExtension",false);
+        options.setExperimentalOption("useAutomationExtension",false);
         //options.setPageLoadStrategy(PageLoadStrategy.NONE);
         //options.addArguments("--start-maximized");
         //options.addArguments("window-size=1920,1080");
