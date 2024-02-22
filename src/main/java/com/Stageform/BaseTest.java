@@ -33,22 +33,12 @@ public class BaseTest {
     public void classLevelSetup() {
         //System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
         WebDriverManager.chromedriver().setup();
-        /*ChromeOptions options = new ChromeOptions();
-        options.addArguments("enable-automation");
-        options.addArguments("--no-sandbox");
-        options.addArguments("--disable-extensions");
-        options.addArguments("--dns-prefetch-disable");
-        options.addArguments("--disable-gpu");
-        options.addArguments("--remote-debugging-port=9222");
-
-        options.setExperimentalOption("useAutomationExtension",false);
-        options.setPageLoadStrategy(PageLoadStrategy.NONE);*/
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/usr/bin/google-chrome-stable");
-        //options.addArguments("--headless");
-        //options.addArguments("--no-sandbox");
+        options.addArguments("--headless");
+        options.addArguments("--no-sandbox");
         options.addArguments("enable-automation");
-        //options.addArguments("--disable-extensions");
+        options.addArguments("--disable-extensions");
         options.addArguments("--dns-prefetch-disable");
         options.addArguments("--disable-gpu");
         options.setExperimentalOption("useAutomationExtension",false);
@@ -57,11 +47,7 @@ public class BaseTest {
         options.addArguments("window-size=1920,1080");
         System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
         System.setProperty("webdriver.chrome.verboseLogging", "true");
-        /*options.addArguments('--headless');
-        options.addArguments('--no-sandbox');
-        options.addArguments('--disable-dev-shm-usage');*/
-
-
+     
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         //extentTest = extentReports.createTest(context.getName());
