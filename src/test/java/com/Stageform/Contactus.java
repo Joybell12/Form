@@ -31,6 +31,7 @@ public class Contactus extends BaseTest{
            cntus.termsandConditions();
            cntus.submitbutton();
            cntus.contactpageload();
+           Thread.sleep(2000);
            cntus.pageloadwaitforsuccessmessage();
            cntus.cotactusvalidate();
         
