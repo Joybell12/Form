@@ -31,8 +31,8 @@ public class BaseTest {
 
     @BeforeMethod
     public void classLevelSetup() {
-        //System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
+        //WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/usr/bin/google-chrome");
         //options.addArguments("--headless");
