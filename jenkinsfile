@@ -1,0 +1,28 @@
+pipeline {
+
+    agent any
+    tools {
+        maven 'maven_3_9_6'
+    }
+    stages {
+
+         stage('Checkout Code from Git') {
+               steps {
+        git 'https://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@github.com/Joybell12/Form'
+    }}
+
+    stage('compile stage') {
+             steps {
+                bat "mvn clean compile"
+        }
+    }
+
+         stage('testing stage') {
+             steps {
+                bat "mvn test"
+        }
+    }
+
+  }
+
+}m--
