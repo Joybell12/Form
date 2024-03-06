@@ -43,10 +43,10 @@ public class BaseTest {
         options.addArguments("--disable-gpu");
         options.setExperimentalOption("useAutomationExtension",false);
         options.setPageLoadStrategy(PageLoadStrategy.NONE);
-        //options.addArguments("--start-maximized");
-        //options.addArguments("window-size=1920,1080");
-        //System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
-        //System.setProperty("webdriver.chrome.verboseLogging", "true");
+        options.addArguments("--start-maximized");
+        options.addArguments("window-size=1920,1080");
+        System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
+        System.setProperty("webdriver.chrome.verboseLogging", "true");
      
         driver = new ChromeDriver(options);
         driver.manage().window().maximize();
