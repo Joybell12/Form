@@ -33,22 +33,22 @@ public class BaseTest {
     public void classLevelSetup() {
         System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
         //WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.setBinary("/usr/bin/google-chrome");
+        //ChromeOptions options = new ChromeOptions();
+        //options.setBinary("/usr/bin/google-chrome");
         //options.addArguments("--headless");
         //options.addArguments("--no-sandbox");
         //options.addArguments("enable-automation");
         //options.addArguments("--disable-extensions");
         //options.addArguments("--dns-prefetch-disable");
         //options.addArguments("--disable-gpu");
-        options.setExperimentalOption("useAutomationExtension",false);
-        options.setPageLoadStrategy(PageLoadStrategy.NONE);
-        options.addArguments("--start-maximized");
-        options.addArguments("window-size=1920,1080");
-        System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
-        System.setProperty("webdriver.chrome.verboseLogging", "true");
+        //options.setExperimentalOption("useAutomationExtension",false);
+        //options.setPageLoadStrategy(PageLoadStrategy.NONE);
+        //options.addArguments("--start-maximized");
+        //options.addArguments("window-size=1920,1080");
+        //System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
+        //System.setProperty("webdriver.chrome.verboseLogging", "true");
      
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         //extentTest = extentReports.createTest(context.getName());
         configproperities.initializePropertyFile();
