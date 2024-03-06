@@ -35,7 +35,7 @@ public class BaseTest {
         //WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/usr/bin/google-chrome");
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         //options.addArguments("enable-automation");
         //options.addArguments("--disable-extensions");
