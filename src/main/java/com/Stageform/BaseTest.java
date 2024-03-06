@@ -33,10 +33,10 @@ public class BaseTest {
     public void classLevelSetup() {
         System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
         //WebDriverManager.chromedriver().setup();
-        //ChromeOptions options = new ChromeOptions();
-        //options.setBinary("/usr/bin/google-chrome");
+        ChromeOptions options = new ChromeOptions();
+        options.setBinary("/usr/bin/google-chrome");
         //options.addArguments("--headless");
-        //options.addArguments("--no-sandbox");
+        options.addArguments("--no-sandbox");
         //options.addArguments("enable-automation");
         //options.addArguments("--disable-extensions");
         //options.addArguments("--dns-prefetch-disable");
@@ -48,7 +48,7 @@ public class BaseTest {
         //System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
         //System.setProperty("webdriver.chrome.verboseLogging", "true");
      
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         driver.manage().window().maximize();
         //extentTest = extentReports.createTest(context.getName());
         configproperities.initializePropertyFile();
