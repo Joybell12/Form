@@ -34,6 +34,7 @@ public class BaseTest {
        
         System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
         //String chromeVersion = "/usr/bin/google-chrome-stable";
+        System.out.println(System.getProperty("user.dir"));
        
         System.out.println("step1" + System.getProperty("webdriver.chrome.driver"));
         //WebDriverManager.chromedriver().setup();
