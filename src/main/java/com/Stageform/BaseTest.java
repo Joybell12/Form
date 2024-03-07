@@ -31,9 +31,11 @@ public class BaseTest {
 
     @BeforeMethod
     public void classLevelSetup() {
-        String chromeVersion = getChromeVersion();
-        System.out.println("Chrome Version: " + chromeVersion);
+       
         System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
+        //String chromeVersion = "/usr/bin/google-chrome-stable";
+       
+        System.out.println("step1" + System.getProperty("webdriver.chrome.driver"));
         //WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/usr/bin/google-chrome-stable");
@@ -52,6 +54,8 @@ public class BaseTest {
         System.setProperty("webdriver.chrome.verboseLogging", "true");
      
         driver = new ChromeDriver(options);
+        System.out.println("step2" + driver);
+       
         driver.manage().window().maximize();
         //extentTest = extentReports.createTest(context.getName());
         configproperities.initializePropertyFile();
