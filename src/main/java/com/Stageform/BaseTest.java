@@ -35,12 +35,12 @@ public class BaseTest {
         //WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/usr/bin/google-chrome-stable");
-        //options.addArguments("--headless");
+        options.addArguments("--headless");
         options.addArguments("--no-sandbox");
         options.addArguments("enable-automation");
-        //options.addArguments("--disable-extensions");
-        //options.addArguments("--dns-prefetch-disable");
-        //options.addArguments("--disable-gpu");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--dns-prefetch-disable");
+        options.addArguments("--disable-gpu");
         options.setExperimentalOption("useAutomationExtension",false);
         options.setPageLoadStrategy(PageLoadStrategy.NONE);
         options.addArguments("--start-maximized");
