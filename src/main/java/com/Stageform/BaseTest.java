@@ -31,6 +31,8 @@ public class BaseTest {
 
     @BeforeMethod
     public void classLevelSetup() {
+        String chromeVersion = getChromeVersion();
+        System.out.println("Chrome Version: " + chromeVersion);
         System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
         //WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
