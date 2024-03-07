@@ -40,23 +40,23 @@ public class BaseTest {
        
         System.out.println("step1" + System.getProperty("webdriver.chrome.driver"));
         //WebDriverManager.chromedriver().setup();
-        ChromeOptions options = new ChromeOptions();
-        options.setBinary("/usr/bin/google-chrome-stable");
+        //ChromeOptions options = new ChromeOptions();
+        //options.setBinary("/usr/bin/google-chrome-stable");
         //options.addArguments("--headless");
-        options.addArguments("--disable-dev-shm-usage");
-        options.addArguments("--no-sandbox");
+        //options.addArguments("--disable-dev-shm-usage");
+        //options.addArguments("--no-sandbox");
         //options.addArguments("enable-automation");
         //options.addArguments("--disable-extensions");
-        options.addArguments("--dns-prefetch-disable");
-        options.addArguments("--disable-gpu");
-        options.setExperimentalOption("useAutomationExtension",false);
-        options.setPageLoadStrategy(PageLoadStrategy.NONE);
-        options.addArguments("--start-maximized");
-        options.addArguments("window-size=1920,1080");
-        System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
-        System.setProperty("webdriver.chrome.verboseLogging", "true");
+        //options.addArguments("--dns-prefetch-disable");
+        //options.addArguments("--disable-gpu");
+        //options.setExperimentalOption("useAutomationExtension",false);
+        //options.setPageLoadStrategy(PageLoadStrategy.NONE);
+        //options.addArguments("--start-maximized");
+        //options.addArguments("window-size=1920,1080");
+        //System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
+        //System.setProperty("webdriver.chrome.verboseLogging", "true");
      
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         System.out.println("step2" + driver);
        
         driver.manage().window().maximize();
