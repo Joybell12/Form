@@ -16,9 +16,9 @@ public class Contactus extends BaseTest{
 
     ContactusFormSubmission() throws InterruptedException {
 
-           //cntus= new Sigma(driver);
-            //cntus.contactpageload();
-           //cntus.contactlink();
+           cntus= new Sigma(driver);
+           cntus.contactpageload();
+           cntus.contactlink();
            //Thread.sleep(3000);
            //cntus.contactpageload();
            //cntus.offer();
