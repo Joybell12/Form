@@ -42,7 +42,7 @@ public class BaseTest {
         //System.out.println("step1" + System.getProperty("webdriver.chrome.driver"));
         //WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.setBinary("/usr/bin/google-chrome-stable");
+        options.setBinary("/usr/bin/google-chrome");
         //options.addArguments("--headless");
         //options.addArguments("--disable-dev-shm-usage");
         //options.addArguments("--no-sandbox");
