@@ -41,8 +41,8 @@ public class BaseTest {
        
         //System.out.println("step1" + System.getProperty("webdriver.chrome.driver"));
         //WebDriverManager.chromedriver().setup();
-        //ChromeOptions options = new ChromeOptions();
-        //options.setBinary("/usr/bin/google-chrome-stable");
+        ChromeOptions options = new ChromeOptions();
+        options.setBinary("/usr/bin/google-chrome-stable");
         //options.addArguments("--headless");
         //options.addArguments("--disable-dev-shm-usage");
         //options.addArguments("--no-sandbox");
@@ -57,7 +57,7 @@ public class BaseTest {
         //System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
         //System.setProperty("webdriver.chrome.verboseLogging", "true");
      
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(options);
         System.out.println("step2" + driver);
        
         driver.manage().window().maximize();
