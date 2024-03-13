@@ -32,7 +32,8 @@ public class BaseTest {
     @BeforeMethod
     public void classLevelSetup() {
        
-        System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
+        //System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
+       WebDriverManager.chromedriver().setup();
         //String chromeVersion = "/usr/bin/google-chrome-stable";
         //String path = System.getProperty("user.dir") + "/folder/chromedriver.exe";
         //System.setProperty("webdriver.chrome.driver", path);                          
