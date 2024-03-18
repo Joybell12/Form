@@ -32,8 +32,8 @@ public class BaseTest {
     @BeforeMethod
     public void classLevelSetup() {
        
-        //System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
-       WebDriverManager.chromedriver().setup();
+      System.setProperty("webdriver.chrome.driver", "./folder/chromedriver");
+       //WebDriverManager.chromedriver().setup();
         //String chromeVersion = "/usr/bin/google-chrome-stable";
         //String path = System.getProperty("user.dir") + "/folder/chromedriver.exe";
         //System.setProperty("webdriver.chrome.driver", path);                          
@@ -43,19 +43,19 @@ public class BaseTest {
         //WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.setBinary("/usr/bin/google-chrome");
-        //options.addArguments("--headless");
-        //options.addArguments("--disable-dev-shm-usage");
-        //options.addArguments("--no-sandbox");
-        //options.addArguments("enable-automation");
-        //options.addArguments("--disable-extensions");
-        //options.addArguments("--dns-prefetch-disable");
-        //options.addArguments("--disable-gpu");
-        //options.setExperimentalOption("useAutomationExtension",false);
-        //options.setPageLoadStrategy(PageLoadStrategy.NONE);
-        //options.addArguments("--start-maximized");
-        //options.addArguments("window-size=1920,1080");
-        //System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
-        //System.setProperty("webdriver.chrome.verboseLogging", "true");
+        options.addArguments("--headless");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--no-sandbox");
+        options.addArguments("enable-automation");
+        options.addArguments("--disable-extensions");
+        options.addArguments("--dns-prefetch-disable");
+        options.addArguments("--disable-gpu");
+        options.setExperimentalOption("useAutomationExtension",false);
+        options.setPageLoadStrategy(PageLoadStrategy.NONE);
+        options.addArguments("--start-maximized");
+        options.addArguments("window-size=1920,1080");
+        System.setProperty("webdriver.chrome.logfile", "chromedriver.log");
+        System.setProperty("webdriver.chrome.verboseLogging", "true");
      
         driver = new ChromeDriver(options);
         System.out.println("step2" + driver);
